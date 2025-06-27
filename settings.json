@@ -1,0 +1,16 @@
+{
+  "screenshot": {
+    "displayPriority": ["center", "topLeft"],
+    "searchAllDisplays": true,
+    "format": "png",
+    "quality": 100,
+    "debug": true,
+    "useFullScreenCrop": true
+  },
+  
+  "ocr": {
+    "defaultLanguage": "ja-JP",
+    "defaultThreshold": 0.8,
+    "debug": true
+  }
+} 

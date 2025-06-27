@@ -1,0 +1,208 @@
+{
+  "youtube_ad_skip": {
+    "metadata": {
+      "description": "Skip youtube ad",
+      "category": "youtube",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    "plan": [
+      {
+        "type": "mouse_move",
+        "text": "スキップ",
+        "target_app": "Google Chrome",
+        "threshold": 0.6
+      },
+      { "type": "wait", "ms": 500 },
+      { "type": "click" }
+    ]
+  },
+  "not_bot": {
+    "metadata": {
+      "description": "I confirm that I am human.",
+      "category": "web",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    "plan": [
+      {
+        "type": "mouse_move",
+        "text": "人間であることを確認します",
+        "threshold": 0.6
+      },
+      { "type": "wait", "ms": 500 },
+      { "type": "click" }
+    ]
+  },
+  "nc_on": {
+    "metadata": {
+      "description": "Enable noise cancellation mode",
+      "category": "audio",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    "plan": [
+      { "type": "mouse_move", "pos": [1596,11] },
+      { "type": "click" },
+      { "type": "wait", "ms": 500 },
+      { "type": "mouse_move", "pos": [1685,440] },
+      { "type": "click" },
+      { "type": "wait", "ms": 500 },
+      { "type": "key", "keyCode": 53 }
+    ]
+  },
+  "nc_off": {
+    "metadata": {
+      "description": "Disable noise cancellation mode",
+      "category": "audio",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    "plan": [
+      { "type": "mouse_move", "pos": [1596,11] },
+      { "type": "click" },
+      { "type": "wait", "ms": 500 },
+      { "type": "mouse_move", "pos": [1685,380] },
+      { "type": "click" },
+      { "type": "wait", "ms": 500 },
+      { "type": "key", "keyCode": 53 }
+    ]
+  },
+  "transparency_on": {
+    "metadata": {
+      "description": "Enable transparency mode (external sound)",
+      "category": "audio",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    "plan": [
+      { "type": "mouse_move", "pos": [1596,11] },
+      { "type": "click" },
+      { "type": "wait", "ms": 500 },
+      { "type": "mouse_move", "pos": [1685,390] },
+      { "type": "click" },
+      { "type": "wait", "ms": 500 },
+      { "type": "key", "keyCode": 53 }
+    ]
+  },
+  "volume_up": {
+    "metadata": {
+      "description": "Increase system volume by 10%",
+      "category": "audio",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    "plan": [
+      { "type": "volume_up", "amount": 10 }
+    ]
+  },
+  "volume_down": {
+    "metadata": {
+      "description": "Decrease system volume by 10%",
+      "category": "audio",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    "plan": [
+      { "type": "volume_down", "amount": 10 }
+    ]
+  },
+  "volume_set": {
+    "metadata": {
+      "description": "Set system volume to absolute value (0-100%)",
+      "category": "audio",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "volume": {
+            "type": "number",
+            "description": "Volume level (0-100)",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": ["volume"]
+      }
+    },
+    "plan": [
+      { "type": "volume_set" }
+    ]
+  },
+  "get_app_list": {
+    "metadata": {
+      "description": "Get app list",
+      "category": "app",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    "plan": [
+      { "type": "get_app_list" }
+    ]
+  },
+  "get_app_ocr": {
+    "metadata": {
+      "description": "Capture specified application's window and run OCR",
+      "category": "app",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "number",
+            "description": "Process ID (PID) of the target application's window"
+          }
+        },
+        "required": ["pid"]
+      }
+    },
+    "plan": [
+      { "type": "get_app_ocr" }
+    ]
+  },
+  "click" :{
+    "metadata": {
+      "description": "Click on the specified position",
+      "category": "app",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number",
+            "description": "X coordinate of the click position"
+          },
+          "y": {
+            "type": "number",
+            "description": "Y coordinate of the click position"
+          }
+        },
+        "required": ["x", "y"]
+      }
+    },
+    "plan": [
+      { "type": "click" }
+    ]
+  }
+} 
