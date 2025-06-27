@@ -1,6 +1,7 @@
 # Macの操作をAIで自動化する
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Sponsor](https://img.shields.io/github/sponsors/belcrod5)](https://github.com/sponsors/belcrod5)
 
 **Macのあらゆる操作を、AIで自動化することを目指すプロジェクトです。**
 
